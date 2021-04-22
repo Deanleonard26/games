@@ -28,9 +28,9 @@ const Home = () => {
         <AnimatePresence layout>
           {pathId && <GameDetail pathId={pathId} />}
         </AnimatePresence>
-        <h2>Upcoming Games</h2>
+        <h2>Popular Games</h2>
         <Games>
-          {upcoming.map((game) => (
+          {popular.map((game) => (
             <Game
               name={game.name}
               released={game.released}
@@ -40,9 +40,9 @@ const Home = () => {
             />
           ))}
         </Games>
-        <h2>Popular Games</h2>
+        <h2>Upcoming Games</h2>
         <Games>
-          {popular.map((game) => (
+          {upcoming.map((game) => (
             <Game
               name={game.name}
               released={game.released}
@@ -71,17 +71,30 @@ const Home = () => {
 
 const GameList = styled(motion.div)`
   padding: 0rem 5rem;
+ 
+
   h2 {
-    padding: 5rem 0rem;
+    padding: 6rem 0rem 3rem 0rem;
+    font-weight:lighter;
   }
 `;
 
 const Games = styled(motion.div)`
-  min-height: 80vh;
+  min-height: 60vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-column-gap: 3rem;
   grid-row-gap: 5rem;
+
+  @media (max-width: 450px) {
+    grid-column-gap: 0rem;
+    grid-row-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax( 1fr));
+    align-items:center;
+    text-align: center;
+    justify-content:center;
+    
+  }
 `;
 
 export default Home;
