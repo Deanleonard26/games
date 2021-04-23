@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { loadDetail } from "../actions/detailAction";
 import { Link } from "react-router-dom";
 import { smallImage } from "../util";
+import {popUp} from '../animations'
 
 const Game = ({ name, released, image, id }) => {
   const stringPathId = id.toString();
@@ -18,7 +19,7 @@ const Game = ({ name, released, image, id }) => {
   };
 
   return (
-    <StyledGame layoutId={stringPathId} onClick={loadDetailHandler}>
+    <StyledGame variants={popUp} initial="hidden" animate="show" layoutId={stringPathId} onClick={loadDetailHandler}>
       <Link to={`/game/${id}`}>
         <motion.h3 layoutId={`title ${stringPathId}`}>{name}</motion.h3>
         <p>{released}</p>
@@ -33,7 +34,7 @@ const Game = ({ name, released, image, id }) => {
 };
 
 const StyledGame = styled(motion.div)`
-  max-height:50vh;
+  max-height:80%;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
   border-radius: 1rem;
@@ -48,6 +49,7 @@ const StyledGame = styled(motion.div)`
     width: 100%;
     height: 50vh;
     object-fit: cover;
+    object-position:center;
   }
 `;
 
