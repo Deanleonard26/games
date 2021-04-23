@@ -87,11 +87,17 @@ const Home = () => {
 
 const GameList = styled(motion.div)`
   padding: 0rem 5rem;
- 
 
   h2 {
     padding: 6rem 0rem 3rem 0rem;
     font-weight:lighter;
+
+    @media (max-width: 450px) {
+    padding:0rem ;
+
+    font-size:27px;
+    
+  }
   }
 `;
 
@@ -104,12 +110,15 @@ const Games = styled(motion.div)`
 
   @media (max-width: 450px) {
     grid-column-gap: 0rem;
-    grid-row-gap: 3rem;
+    grid-row-gap: 0rem;
     grid-template-columns: repeat(auto-fit, minmax( 1fr));
     align-items:center;
     text-align: center;
     justify-content:center;
     
+    img {
+      height:300px;
+    }
   }
 `;
 

@@ -140,6 +140,17 @@ const Detail = styled(motion.div)`
   img {
     width: 100%;
   }
+
+  @media (max-width: 400px) {
+    padding: .5rem;
+    margin:0;
+
+    img {
+    width: 100%;
+    margin:0;
+    padding:0;
+  }
+  }
 `;
 
 const Stats = styled(motion.div)`
@@ -187,10 +198,24 @@ const Media = styled(motion.div)`
   img {
     width: 100%;
   }
+
+  @media (max-width: 400px) {
+    margin-top:20px;
+  
+  }
 `;
 
 const Description = styled(motion.div)`
   margin: 5rem 0rem;
+
+  @media (max-width: 400px) {
+    margin: 20px;
+
+    p {
+      font-size:12px;
+    }
+  
+  }
 `;
 
 export default GameDetail;
