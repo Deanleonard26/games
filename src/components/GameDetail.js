@@ -141,7 +141,7 @@ const Detail = styled(motion.div)`
     width: 100%;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     padding: .5rem;
     margin:0;
 
