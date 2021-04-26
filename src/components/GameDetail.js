@@ -45,9 +45,9 @@ const GameDetail = ({ pathId}) => {
 
   // Get Platform Images
   const getPlatform = (platform) => {
-    if (platform.includes("PlayStation")) {
+    if (platform.includes("PlayStation 4")) {
       return playstation;
-    } else if (platform.includes("Xbox")) {
+    } else if (platform.includes("Xbox ")) {
       return xbox;
     } else if (platform === "PC") {
       return steam;
