@@ -93,20 +93,21 @@ const GameList = styled(motion.div)`
     font-weight:lighter;
 
     @media (max-width: 450px) {
-    padding:0rem ;
-
-    font-size:27px;
-    
+      padding:0rem ;
+      justify-content:center;
+      text-align:center;
+      align-items:center;
+      font-size:25px; 
   }
   }
 `;
 
 const Games = styled(motion.div)`
-  min-height: 60vh;
+  min-height:80vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-column-gap: 3rem;
-  grid-row-gap: 5rem;
+  grid-row-gap: 0;
 
   @media (max-width: 450px) {
     grid-column-gap: 0rem;
@@ -116,9 +117,6 @@ const Games = styled(motion.div)`
     text-align: center;
     justify-content:center;
     
-    img {
-      height:300px;
-    }
   }
 `;
 

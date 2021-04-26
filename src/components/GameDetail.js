@@ -212,7 +212,7 @@ const Description = styled(motion.div)`
     margin: 20px;
 
     p {
-      font-size:12px;
+      font-size:10px;
     }
   
   }
